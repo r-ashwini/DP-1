@@ -1,0 +1,26 @@
+class Solution {
+    public int rob(int[] nums) {
+        int amount = 0; 
+        for (int i = 0; i<=1; i++){
+            int insideamount = 0;
+            for (int j = i; j<nums.length; j=j+2)
+            {
+             
+            insideamount = insideamount + nums[j];
+            }
+            if (insideamount > amount) amount = insideamount;
+            
+        }
+        return amount;
+        
+    }
+}
+
+
+
+//Test case failed for Input
+//[2,1,1,2]
+//Output
+//3
+//Expected
+//4
